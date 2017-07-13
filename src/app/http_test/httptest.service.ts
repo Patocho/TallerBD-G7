@@ -19,7 +19,7 @@ export class Httptestservice{
 		headers.append('Content-Type', 
 		'application/x-www-form-urlencoded');
 
-		return this._http.post('http://146.83.216.216:3004/explorer/#!/Tweet/Tweet_create', params, {
+		return this._http.post('http://0.0.0.0:3000/explorer/#!/Tweet/Tweet_create', params, {
 			headers: headers
 		})
 		.map(res => res.json());
@@ -27,7 +27,7 @@ export class Httptestservice{
 	}
 
 	getStats(range: string){
-		return this._http.get('http://146.83.216.216:3004/api/Tweets/stats?range='+range).map((response:Response) => response.json());
+		return this._http.get('http://0.0.0.0:3000/api/Tweets/stats?range='+range).map((response:Response) => response.json());
 	}
 
 
