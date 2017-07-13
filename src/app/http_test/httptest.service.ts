@@ -9,7 +9,7 @@ export class Httptestservice{
 
 	getInfo(){
 	
-		return this._http.get('http://146.83.216.216:3004/api/Tweets').map((response:Response) => response.json());
+		return this._http.get('http://0.0.0.0:3000/api/Tweets').map((response:Response) => response.json());
 	}
 	postJSON(){
 
